@@ -16,7 +16,7 @@ exports.login = async (req, res, next) => {
       throw error;
     }
 
-    res.status(200).json({ ...user, password: undefined });
+    res.status(200).json(user);
   } catch (error) {
     if (!error.statusCode) {
       error.statusCode = 500;
